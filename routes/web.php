@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Admin\Gestores\Gestores;
+use App\Http\Livewire\Admin\Gestores\GestoresForm;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('inicial');
 });
+
+Route::get('/gestores', Gestores::class);
+Route::get('/gestores/criar', GestoresForm::class);
+
+
+
+
